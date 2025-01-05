@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 
 namespace RGFileImport
 {
@@ -81,6 +82,7 @@ namespace RGFileImport
 
         public void LoadFile(string path)
         {
+            Debug.Log("Attempting to load file: " + path);
             if (!File.Exists(path))
                 throw new FileNotFoundException();
             fullName = path;
